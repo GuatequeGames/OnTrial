@@ -20,7 +20,6 @@ public class TileAppearance : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        Debug.Log("Collision");
         TileCreator tileCreator = other.GetComponent<TileCreator>();
         if (tileCreator == null || !tileCreator.isActiveAndEnabled) return;
 
