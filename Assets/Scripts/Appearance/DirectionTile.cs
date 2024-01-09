@@ -6,7 +6,7 @@ public class DirectionTile : MonoBehaviour
 {
 
     [SerializeField] private List<Transform> listPositions;
-    [SerializeField] private List<Orientation> listOrientations;
+    [SerializeField] private List<float> listRotations;
     [SerializeField] private int currentIndex;
 
 
@@ -23,7 +23,12 @@ public class DirectionTile : MonoBehaviour
     }
 
 
-
+    public void Rotate()
+    {
+        currentIndex = (currentIndex + 1) % listPositions.Count;
+        Vector3 rotation = new Vector3(transform.rotation.eulerAngles.x, listRotations[currentIndex], transform.rotation.eulerAngles.z);
+        transform.rotation = Quaternion.Euler(rotation);
+    }
 
 
 

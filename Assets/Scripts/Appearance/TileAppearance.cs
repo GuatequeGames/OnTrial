@@ -7,6 +7,7 @@ public class TileAppearance : MonoBehaviour
     [SerializeField] private Transform inferiorTile;
     [SerializeField] private Vector3 inferiorTileOriginalPos;
     [SerializeField] private float timeToAppear;
+    [SerializeField] private float timeOffset;
     [SerializeField] private int NCreatorsOnArea;
     [SerializeField] private List<string> tagsToActivate;
 
@@ -15,6 +16,7 @@ public class TileAppearance : MonoBehaviour
     private void Start()
     {
         inferiorTileOriginalPos = inferiorTile.position;
+        timeToAppear = Random.Range(timeToAppear - timeOffset, timeToAppear + timeOffset);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,13 +31,6 @@ public class TileAppearance : MonoBehaviour
 
     }
 
-    IEnumerator Appear()
-    {
-        inferiorTile.gameObject.SetActive(true);
-        inferiorTile.DOMove(transform.position, timeToAppear).SetEase(Ease.OutCubic).SetId("Move");
-        yield return new WaitForSeconds(timeToAppear);
-
-    }
 
     void CheckPosition()
     {

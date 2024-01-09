@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "f2774499-8f1b-4505-87f9-5d873f423ae4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -140,7 +149,7 @@
                     "id": "973e1fac-76e6-4f0a-90f0-485dee2f3c66",
                     "path": "2DVector(mode=2)",
                     "interactions": "",
-                    "processors": "StickDeadzone",
+                    "processors": "StickDeadzone,ScaleVector2(x=10,y=10)",
                     "groups": "",
                     "action": "Aim",
                     "isComposite": true,
@@ -198,6 +207,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9a86c91f-9e2a-429e-bbaf-8b1dc64d812d",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d2bd0999-063f-4f80-b911-b59e29ec8f8b",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
