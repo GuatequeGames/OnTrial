@@ -124,7 +124,7 @@ Material:
     - _HeightBias: 0.1
     - _HeightBiasStep: 0.1
     - _HeightScale: 0.1
-    - _InnerLightTightness: 40
+    - _InnerLightTightness: 8.1
     - _Layer0Speed: 0
     - _Layer0SpeedX: 0
     - _Layer0SpeedY: -1

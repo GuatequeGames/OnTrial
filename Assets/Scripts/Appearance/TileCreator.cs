@@ -13,8 +13,10 @@ public class TileCreator : MonoBehaviour
     {
         initialPos = transform.position;
         desactivePos = transform.position + Vector3.up * 10;
+
+        if (!isActive) SetActive(false);
     }
-    void SetActive(bool _active)
+    public void SetActive(bool _active)
     {
         isActive = _active;
         if (isActive)
